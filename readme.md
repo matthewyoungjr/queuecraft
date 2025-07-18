@@ -23,7 +23,7 @@ QueueCraft is a lightweight, modular job queue and worker system built in Go. It
 - [pgx](https://github.com/jackc/pgx) as the PostgreSQL driver
 - [Neon (PostgreSQL)](https://neon.tech/)
 - [Goose](https://github.com/pressly/goose) for migrations
-- [SQLC (optional)](https://sqlc.dev/) for type-safe SQL
+- [SQLC](https://sqlc.dev/) for type-safe SQL
 - Go standard library
 
 ---
@@ -35,4 +35,4 @@ QueueCraft is a lightweight, modular job queue and worker system built in Go. It
 - Go 1.20+
 - A Neon PostgreSQL instance
 - [Goose CLI](https://github.com/pressly/goose#installing) installed
-- (Optional) SQLC if you're using generated code
+- SQLC if you're using generated code
