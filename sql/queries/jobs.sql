@@ -21,3 +21,15 @@ RETURNING id, type, payload, status, run_at, created_at;
 -- name: DeleteJobById :exec
 DELETE FROM jobs 
 WHERE id = $1;
+
+
+-- name: ListJobs :many
+SELECT id, type, payload, status, run_at, created_at
+FROM jobs 
+ORDER BY created_at DESC;
+
+-- name: ListJobsPaginated :many
+SELECT id, type, payload, status, run_at, created_at
+FROM jobs 
+ORDER BY created_at DESC
+LIMIT $1 OFFSET $2;
