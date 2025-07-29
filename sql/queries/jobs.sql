@@ -21,7 +21,7 @@ RETURNING id, type, payload, status, run_at, created_at;
 -- name: GetJobById :one 
 SELECT id, type, payload, status, retries, run_at, created_at 
 FROM jobs
-RETURNING id, type, payload, status, retries, run_at, created_at;
+WHERE id = $1
 
 
 -- name: DeleteJobById :exec
