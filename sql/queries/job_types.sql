@@ -1,5 +1,5 @@
 -- name: CreateJobType :many
-INSERT INTO job_types(id, name)
+INSERT INTO job_types(name)
 VALUES
 ('send_email'), 
 ('send_push_notification'), 

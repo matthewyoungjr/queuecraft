@@ -12,16 +12,16 @@ VALUES(
     $5, -- duration_ms 
     $6 -- created_at 
 )
-RETURNING *;
+RETURNING id, job_id, user_id, message, attempts, duration_ms, created_at;
 
 
 -- name: ListAllLogs :many
-SELECT * 
+SELECT id, job_id, user_id, message, attempts, duration_ms, created_at 
 FROM job_logs
 ORDER BY id;
 
 
 -- name: ListLogsPaginated :many 
-SELECT *
+SELECT id, job_id, user_id, message, attempts, duration_ms, created_at
 FROM job_logs
 LIMIT $1 OFFSET $2;
