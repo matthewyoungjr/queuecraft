@@ -10,7 +10,7 @@ VALUES(
     $3, -- message 
     $4, -- attempts
     $5, -- duration_ms 
-    $6, -- created_at 
+    $6 -- created_at 
 )
 RETURNING *;
 
